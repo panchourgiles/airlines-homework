@@ -4,13 +4,14 @@ import Title from '@commonComponents/Title';
 import { breakpoints, colors, spacing } from '@styles/theme';
 import styled from 'styled-components';
 
-const ItemPopularRoute = ({
+const RoutesItem = ({
   routeCoverImage,
   origin,
   destination,
   departureDate,
   priceUSD,
-  tripType
+  tripType,
+  onClick
 }) => {
   routeCoverImage = 'https://s.latamairlines.com/images/destinations/CUE.jpg';
   return (
@@ -32,7 +33,7 @@ const ItemPopularRoute = ({
             </Price>
             <Text bold={true}>{tripType}</Text>
           </Fares>
-          <Button>View Deal</Button>
+          <Button onClick={onClick}>View Deal</Button>
         </Description>
       </Card>
     </Wrapper>
@@ -95,4 +96,4 @@ const Price = styled.div`
   }
 `;
 
-export default ItemPopularRoute;
+export default RoutesItem;

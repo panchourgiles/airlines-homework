@@ -4,6 +4,7 @@
     "paths": {
       "@commonComponents/*": ["components/common/*"],
       "@components/*": ["components/*"],
+      "@context/*": ["context/*"],
       "@api/*": ["pages/api/*"], 
       "@styles/*": ["styles/*"], 
     }

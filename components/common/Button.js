@@ -1,7 +1,9 @@
 import { colors, fonts, spacing } from '@styles/theme';
 import styled from 'styled-components';
 
-const Button = ({ children }) => <Wrapper>{children}</Wrapper>;
+const Button = ({ children, onClick }) => (
+  <Wrapper onClick={onClick}>{children}</Wrapper>
+);
 
 const Wrapper = styled.button`
   background: ${colors.primary};
