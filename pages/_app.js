@@ -1,3 +1,4 @@
+import { RoutesProvider } from '@context/RoutesContext';
 import { colors, fonts } from '@styles/theme';
 import { createGlobalStyle } from 'styled-components';
 
@@ -17,7 +18,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <RoutesProvider>
+        <Component {...pageProps} />
+      </RoutesProvider>
     </>
   );
 }
