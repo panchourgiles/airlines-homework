@@ -1,5 +1,6 @@
+import { ModalProvider } from '@context/ModalContext';
 import { RoutesProvider } from '@context/RoutesContext';
-import { colors, fonts } from '@styles/theme';
+import { colors, fonts } from '@styles';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -12,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  a {
+    color: ${colors.primary};
+  }
 `;
 
 export default function App({ Component, pageProps }) {
@@ -19,7 +23,9 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <RoutesProvider>
-        <Component {...pageProps} />
+        <ModalProvider>
+          <Component {...pageProps} />
+        </ModalProvider>
       </RoutesProvider>
     </>
   );
