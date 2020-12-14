@@ -2,11 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@api/*": ["pages/api/*"], 
       "@commonComponents/*": ["components/common/*"],
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
-      "@api/*": ["pages/api/*"], 
-      "@styles/*": ["styles/*"], 
+      "@icons/*": ["components/icons/*"],
+      "@lib/*": ["lib/*"],
+      "@styles": ["styles/theme.js"], 
+      "@utils/*": ["utils/*"]
     }
   }
 }
