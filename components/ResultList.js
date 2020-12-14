@@ -1,7 +1,7 @@
 import Link from '@commonComponents/Link';
 import Title from '@commonComponents/Title';
 import ResultTable from '@components/ResultTable';
-import useDataAPI from '@lib/useDataApi';
+import useDataAPI from '@lib/useDataAPI';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
