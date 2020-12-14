@@ -1,8 +1,8 @@
 import Button from '@commonComponents/Button';
 import Text from '@commonComponents/Text';
 import Title from '@commonComponents/Title';
-import { breakpoints, colors, spacing } from '@styles/theme';
-import styled from 'styled-components';
+import { breakpoints, colors, spacing } from '@styles';
+import styled, { css } from 'styled-components';
 
 const RoutesItem = ({
   routeCoverImage,
@@ -13,11 +13,10 @@ const RoutesItem = ({
   tripType,
   onClick
 }) => {
-  routeCoverImage = 'https://s.latamairlines.com/images/destinations/CUE.jpg';
   return (
     <Wrapper>
       <Card>
-        <Image src={routeCoverImage} alt={destination} />
+        <Image image={routeCoverImage} />
         <Description>
           <div>
             <Title status="primary">
@@ -41,7 +40,6 @@ const RoutesItem = ({
 };
 
 const Wrapper = styled.div`
-  min-height: 510px;
   flex-basis: 100%;
   position: relative;
   padding: ${spacing.small};
@@ -64,11 +62,23 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: ${spacing.small};
+  transition: border-color 0.25s, box-shadow 0.25s;
+  &:hover {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+  }
 `;
 
-const Image = styled.img`
-  max-width: 100%;
-  height: auto;
+const Image = styled.div`
+  ${(props) =>
+    props.image &&
+    css`
+      background-image: url(${props.image});
+    `}
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  height: 143px;
+  background-position: center;
 `;
 
 const Description = styled.div`
