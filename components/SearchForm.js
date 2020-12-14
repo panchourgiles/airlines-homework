@@ -168,6 +168,8 @@ const SearchForm = ({ origins, destinations }) => {
               disabled={inputsFormData.tripType === 'oneWay'}
             />
           </Column>
+        </Row>
+        <Row>
           <Column>
             <TextInput
               label="Passenger(s)"
