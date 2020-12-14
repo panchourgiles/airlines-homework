@@ -1,8 +1,10 @@
 import { colors } from '@styles';
 import styled, { css } from 'styled-components';
 
-const Subtitle = ({ status, children }) => (
-  <Wrapper status={status}>{children}</Wrapper>
+const Subtitle = ({ status, children, ...rest }) => (
+  <Wrapper status={status} {...rest}>
+    {children}
+  </Wrapper>
 );
 
 const Wrapper = styled.h3`

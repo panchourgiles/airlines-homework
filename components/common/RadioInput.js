@@ -1,7 +1,15 @@
 import { fonts, spacing } from '@styles';
 import styled from 'styled-components';
 
-const RadioInput = ({ id, label, name, checked = false, value, onChange }) => {
+const RadioInput = ({
+  id,
+  label,
+  name,
+  checked = false,
+  value,
+  onChange,
+  ...rest
+}) => {
   return (
     <Wrapper>
       <Radio
@@ -11,6 +19,7 @@ const RadioInput = ({ id, label, name, checked = false, value, onChange }) => {
         checked={checked}
         value={value}
         onChange={onChange}
+        {...rest}
       />
       {label && <Label htmlFor={id}>{label}</Label>}
     </Wrapper>

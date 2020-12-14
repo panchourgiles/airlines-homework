@@ -1,5 +1,5 @@
+import { breakpoints, spacing } from '@styles';
 import styled from 'styled-components';
-import { breakpoints, spacing } from 'styles/theme';
 
 const Layout = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;

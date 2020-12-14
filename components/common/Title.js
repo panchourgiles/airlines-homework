@@ -1,8 +1,10 @@
 import { colors } from '@styles';
 import styled, { css } from 'styled-components';
 
-const Title = ({ status, children }) => (
-  <Wrapper status={status}>{children}</Wrapper>
+const Title = ({ status, textAlign, children, ...rest }) => (
+  <Wrapper status={status} textAlign={textAlign} {...rest}>
+    {children}
+  </Wrapper>
 );
 
 const Wrapper = styled.h2`
@@ -13,6 +15,14 @@ const Wrapper = styled.h2`
         `
       : css`
           color: ${colors.black};
+        `}
+  ${(props) =>
+    props.textAlign
+      ? css`
+          text-align: ${props.textAlign};
+        `
+      : css`
+          text-align: left;
         `}
 `;
 
