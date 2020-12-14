@@ -1,4 +1,4 @@
-import { colors } from '@styles/theme';
+import { colors } from '@styles';
 import styled, { css } from 'styled-components';
 
 const Title = ({ status, children }) => (
