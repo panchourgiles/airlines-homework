@@ -18,7 +18,8 @@ export const colors = {
   grayLight: '#a0aaaD',
   grayLightest: '#e1e6ea',
   primary: '#0073e6',
-  secondary: '#ffec00'
+  secondary: '#ffec00',
+  red: '#fe6068'
 };
 
 export const spacing = {
