@@ -1,8 +1,10 @@
 # Airlines Homework <br />
 
-## Installation <br />
+#### Setup
 
-`yarn install`
+1. Clone this repository,
+3. Install what's needed: `yarn install`,
+4. Copy `.env.sample` to `.env.local` (change the values, if needed),
 
 ## Start in development mode<br />
 
